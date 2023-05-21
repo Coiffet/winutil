@@ -47,7 +47,7 @@ function Install-WinUtilWinget {
             Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
             Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
             Install-Script -Name winget-install -force
-            winget-instal
+            winget-install
             
             
             Start-Process powershell.exe -Verb RunAs -ArgumentList "-command irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/$BranchToUse/winget.ps1 | iex | Out-Host" -WindowStyle Normal -ErrorAction Stop
